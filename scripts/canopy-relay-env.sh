@@ -2,7 +2,9 @@
 if [[ -d /home/ruv/.local/share/dream-machine/runtime/node-v24.21.0-linux-x64/bin ]]; then
   export PATH="/home/ruv/.local/share/dream-machine/runtime/node-v24.21.0-linux-x64/bin:/home/ruv/.cargo/bin:${PATH}"
 fi
-export PLAYWRIGHT_BROWSERS_PATH="${PLAYWRIGHT_BROWSERS_PATH:-/home/ruv/.cache/ms-playwright}"
+if [[ -z "${PLAYWRIGHT_BROWSERS_PATH:-}" && -d /home/ruv/.cache/ms-playwright ]]; then
+  export PLAYWRIGHT_BROWSERS_PATH=/home/ruv/.cache/ms-playwright
+fi
 export CARGO_TARGET_DIR="${CARGO_TARGET_DIR:-/tmp/canopy-relay-target}"
 export CR_BIND="${CR_BIND:-127.0.0.1:18080}"
 export CR_BASE_URL="${CR_BASE_URL:-http://${CR_BIND}}"
