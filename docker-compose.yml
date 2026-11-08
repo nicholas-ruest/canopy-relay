@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    environment:
+      CANOPY_RELAY_ADDR: 0.0.0.0:18080
+      CANOPY_RELAY_DATA: /data
+      CR_TOKEN: ${CR_TOKEN:-canopy-relay-field-lead-token}
+      RUST_LOG: info
+    volumes:
+      - canopy-relay-data:/data
+    ports:
+      - "18080:18080"
+    healthcheck:
+      test: ["CMD", "cr-service", "--healthcheck", "127.0.0.1:18080"]
+      interval: 2s
+      timeout: 2s
+      retries: 60
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "18081:18081"
+    depends_on:
+      api:
+        condition: service_healthy
+volumes:
+  canopy-relay-data: {}

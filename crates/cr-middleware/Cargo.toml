@@ -1,0 +1,20 @@
+[package]
+name = "cr-middleware"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+axum = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+serde_json = { workspace = true }
+tower = { workspace = true }
+tracing = { workspace = true }
+cr-errors = { path = "../cr-errors" }
+
+[dev-dependencies]
+tokio = { workspace = true }

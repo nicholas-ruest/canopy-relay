@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "99d8543f77ad38eacdaa30e3d7fe9893f8b3285f",
+  "argv": [
+    "bash",
+    "scripts/probe.sh",
+    "worldgraph-success"
+  ],
+  "started_at": "2026-11-08T03:24:30.398Z",
+  "ended_at": "2026-11-08T03:24:30.454Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "integrations-9f3f3517-471b-407b-9128-ea506efb0f84.log",
+  "log_sha256": "f2d728e50775aba764b333fc1df81a4397748e134137148f920cb91a0bff2bf8"
+}

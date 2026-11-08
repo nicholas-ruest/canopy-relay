@@ -1,0 +1,13 @@
+[package]
+name = "cr-cedar-policy"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+cedar-policy = { workspace = true }
+cr-types = { path = "../cr-types" }
+cr-errors = { path = "../cr-errors" }

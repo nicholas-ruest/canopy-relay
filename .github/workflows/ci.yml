@@ -1,0 +1,52 @@
+name: full-product-gate
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  full-product:
+    name: Canopy Relay full product gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: dtolnay/rust-toolchain@1.99.1
+        with:
+          components: rustfmt, clippy
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.21.0
+          cache: npm
+          cache-dependency-path: |
+            frontend/package-lock.json
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-deny
+      - name: Install locked dependencies
+        run: |
+          cargo fetch --locked
+          npm --prefix frontend ci
+          npx --prefix frontend playwright install --with-deps chromium
+      - name: Verify canonical bundle bytes
+        run: node scripts/dream-machine-gate-bundle.mjs .
+      - name: Rust-share self-test and clean-tree audit
+        run: |
+          mkdir -p "${{ runner.temp }}/canopy-relay-evidence"
+          node scripts/dream-machine-rust-share.mjs --self-test
+          node scripts/dream-machine-rust-share.mjs . | tee "${{ runner.temp }}/canopy-relay-evidence/rust-share.json"
+      - name: Canonical full product verification
+        env:
+          DREAM_MACHINE_EVIDENCE_DIR: ${{ runner.temp }}/canopy-relay-evidence
+          DREAM_MACHINE_PRODUCER: Codex
+          DREAM_MACHINE_RUN_ID: github-${{ github.run_id }}-${{ github.run_attempt }}
+          DREAM_MACHINE_GUIDANCE_SHA: 34cc1f31df20d71ea8a42b819091334a981f43cb
+        run: ./scripts/verify-prototype.sh
+      - name: Upload exact-source evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canopy-relay-evidence-${{ github.event.pull_request.head.sha || github.sha }}
+          path: ${{ runner.temp }}/canopy-relay-evidence/**
+          if-no-files-found: error

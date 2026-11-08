@@ -1,0 +1,15 @@
+target/
+crates/rl-*/
+frontend/node_modules/
+frontend/dist/
+frontend/playwright-report/
+frontend/test-results/
+*.tsbuildinfo
+data/
+*.log
+!selection-evidence/readiness/*.log
+evidence/verify.exit
+
+upstreams/node_modules/
+frontend/node_modules/
+frontend/dist/

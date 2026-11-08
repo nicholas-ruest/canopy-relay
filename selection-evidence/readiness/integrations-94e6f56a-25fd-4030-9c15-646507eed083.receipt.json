@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "99d8543f77ad38eacdaa30e3d7fe9893f8b3285f",
+  "argv": [
+    "bash",
+    "scripts/probe.sh",
+    "rucelium-success"
+  ],
+  "started_at": "2026-11-08T03:24:30.119Z",
+  "ended_at": "2026-11-08T03:24:30.197Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "integrations-94e6f56a-25fd-4030-9c15-646507eed083.log",
+  "log_sha256": "f547ca31a69a8ecbe4c0f5d12921cb76045048de9c80d1bd914c86b2f2046b0c"
+}

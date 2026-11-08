@@ -1,0 +1,7 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.02s
+     Running unittests src/lib.rs (/workspace/scratch/d8bc49620fcf/probe-target/debug/deps/wifi_densepose_worldgraph-f07885a632ed61f1)
+
+running 1 test
+test graph::tests::add_edge_unknown_endpoint_errors ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.00s

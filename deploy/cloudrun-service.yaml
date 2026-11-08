@@ -1,0 +1,42 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: canopy-relay
+  annotations:
+    run.googleapis.com/launch-stage: BETA
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: "3"
+    spec:
+      containerConcurrency: 40
+      timeoutSeconds: 60
+      containers:
+        - image: REGION-docker.pkg.dev/PROJECT/canopy-relay/api:SOURCE_SHA
+          ports:
+            - containerPort: 18080
+          env:
+            - name: CANOPY_RELAY_ADDR
+              value: 0.0.0.0:18080
+            - name: CANOPY_RELAY_DATA
+              value: /mnt/authorized-storage
+            - name: CR_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: canopy-relay-token
+                  key: latest
+          resources:
+            limits:
+              cpu: "2"
+              memory: 2Gi
+          volumeMounts:
+            - name: authorized-persistence
+              mountPath: /mnt/authorized-storage
+      volumes:
+        - name: authorized-persistence
+          csi:
+            driver: gcsfuse.run.googleapis.com
+            readOnly: false
+            volumeAttributes:
+              bucketName: AUTHORIZED_CANOPY_RELAY_BUCKET

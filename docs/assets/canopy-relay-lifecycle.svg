@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="300" viewBox="0 0 1120 300" role="img" aria-labelledby="title2 desc2">
+  <title id="title2">Canopy Relay governed intervention lifecycle</title>
+  <desc id="desc2">A moving evidence token crosses trust, twin, forecast, Cedar policy, OpenDAL storage, and rendered audit.</desc>
+  <rect width="1120" height="300" rx="28" fill="#f2f3e8"/>
+  <path d="M90 150 H1030" stroke="#bfd1c5" stroke-width="10" stroke-linecap="round"/>
+  <g font-family="system-ui" text-anchor="middle"><g fill="#173f34"><circle cx="110" cy="150" r="38" fill="#dcecdf"/><text x="110" y="155" font-size="14">TRUST</text><circle cx="300" cy="150" r="38" fill="#dcecdf"/><text x="300" y="155" font-size="14">TWIN</text><circle cx="490" cy="150" r="38" fill="#dcecdf"/><text x="490" y="155" font-size="14">FORECAST</text><circle cx="680" cy="150" r="38" fill="#ffe4af"/><text x="680" y="155" font-size="14">CEDAR</text><circle cx="870" cy="150" r="38" fill="#dcecdf"/><text x="870" y="155" font-size="14">STORE</text><circle cx="1030" cy="150" r="38" fill="#dcecdf"/><text x="1030" y="155" font-size="14">AUDIT</text></g><text x="560" y="52" font-size="25" font-weight="700" fill="#173f34">Evidence before effects</text><text x="560" y="272" font-size="15" fill="#4a6d60">deny creates no intervention write • approved action remains restart-durable</text></g>
+  <circle cx="110" cy="150" r="12" fill="#e46c42"><animate attributeName="cx" values="110;300;490;680;680;870;1030;110" keyTimes="0;.16;.32;.48;.58;.75;.9;1" dur="7s" repeatCount="indefinite"/><animate attributeName="fill" values="#e46c42;#e46c42;#e46c42;#e46c42;#2f9b70;#2f9b70;#2f9b70;#e46c42" dur="7s" repeatCount="indefinite"/></circle>
+</svg>
+

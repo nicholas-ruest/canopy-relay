@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "99d8543f77ad38eacdaa30e3d7fe9893f8b3285f",
+  "argv": [
+    "bash",
+    "scripts/probe.sh",
+    "cedar-success"
+  ],
+  "started_at": "2026-11-08T03:24:31.593Z",
+  "ended_at": "2026-11-08T03:24:31.738Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "integrations-654da79f-c865-4106-9926-a69714ba9f68.log",
+  "log_sha256": "ca96a8dd5fb7a12e6f81a92851215cb206e01b616612ac97d2fbab4afa8d2deb"
+}

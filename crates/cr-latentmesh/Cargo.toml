@@ -1,0 +1,16 @@
+[package]
+name = "cr-latentmesh"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+cr-types = { path = "../cr-types" }
+cr-errors = { path = "../cr-errors" }
+latentmesh-air-core = { git = "https://github.com/ruvnet/LatentMesh", rev = "df9270799a1391925c1840a1845a6d169aaa2d93" }

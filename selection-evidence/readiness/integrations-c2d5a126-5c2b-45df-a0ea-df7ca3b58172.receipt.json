@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "99d8543f77ad38eacdaa30e3d7fe9893f8b3285f",
+  "argv": [
+    "bash",
+    "scripts/probe.sh",
+    "latentmesh-failure"
+  ],
+  "started_at": "2026-11-08T03:24:31.165Z",
+  "ended_at": "2026-11-08T03:24:31.221Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "integrations-c2d5a126-5c2b-45df-a0ea-df7ca3b58172.log",
+  "log_sha256": "7d85d1dde317737dc604edad08c561cb96b9dbb533f97e63b21b24ee73b253c7"
+}

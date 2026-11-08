@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "99d8543f77ad38eacdaa30e3d7fe9893f8b3285f",
+  "argv": [
+    "bash",
+    "scripts/probe.sh",
+    "midstream-success"
+  ],
+  "started_at": "2026-11-08T03:24:30.645Z",
+  "ended_at": "2026-11-08T03:24:30.774Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "integrations-27d6c284-df24-481a-ac4e-e6f654b1f68e.log",
+  "log_sha256": "c3969345249a42d43f954972123f28db627a08a817d91e306a19ac6361e2efa2"
+}

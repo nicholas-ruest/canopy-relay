@@ -1,0 +1,516 @@
+warning: unused import: `error`
+  --> src/cascade.rs:32:18
+   |
+32 | use log::{debug, error, info};
+   |                  ^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `error`
+  --> src/integration.rs:20:18
+   |
+20 | use log::{debug, error, info, warn};
+   |                  ^^^^^
+
+warning: unused import: `crate::Network`
+   --> src/training/adam.rs:721:9
+    |
+721 |     use crate::Network;
+    |         ^^^^^^^^^^^^^^
+
+warning: unused import: `std::sync::Arc`
+  --> src/simd/mod.rs:15:5
+   |
+15 | use std::sync::Arc;
+   |     ^^^^^^^^^^^^^^
+
+warning: unused import: `ComputeBackend`
+  --> src/webgpu/compute_context.rs:11:45
+   |
+11 |     backend::{BackendSelector, BackendType, ComputeBackend},
+   |                                             ^^^^^^^^^^^^^^
+
+warning: unused variable: `e`
+   --> src/network.rs:443:43
+    |
+443 |         bincode::serialize(self).map_err(|e| {
+    |                                           ^ help: if this is intentional, prefix it with an underscore: `_e`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `layer`
+   --> src/webgpu/compute_context.rs:318:9
+    |
+318 |         layer: &Layer<T>,
+    |         ^^^^^ help: if this is intentional, prefix it with an underscore: `_layer`
+
+warning: unused variable: `weights`
+   --> src/webgpu/compute_context.rs:319:9
+    |
+319 |         weights: &[T],
+    |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_weights`
+
+warning: unused variable: `inputs`
+   --> src/webgpu/compute_context.rs:320:9
+    |
+320 |         inputs: &[T],
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_inputs`
+
+warning: unused variable: `dims`
+   --> src/webgpu/compute_context.rs:321:9
+    |
+321 |         dims: MatrixDims,
+    |         ^^^^ help: if this is intentional, prefix it with an underscore: `_dims`
+
+warning: unused variable: `size`
+   --> src/webgpu/memory.rs:768:35
+    |
+768 |     pub fn allocate_buffer(&self, size: usize) -> ComputeResult<BufferHandle> {
+    |                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_size`
+
+warning: unused variable: `handle`
+   --> src/webgpu/memory.rs:838:37
+    |
+838 |     pub fn deallocate_buffer(&self, handle: BufferHandle) -> ComputeResult<()> {
+    |                                     ^^^^^^ help: if this is intentional, prefix it with an underscore: `_handle`
+
+warning: method `train_single_candidate_parallel` is never used
+   --> src/cascade.rs:979:8
+    |
+420 | impl<T: Float> CascadeTrainer<T> {
+    | -------------------------------- method in this implementation
+...
+979 |     fn train_single_candidate_parallel(
+    |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: methods `train_candidates_parallel`, `train_single_candidate_with_data`, `calculate_candidate_correlation_with_data`, and `update_candidate_weights_simple` are never used
+    --> src/cascade.rs:1074:8
+     |
+1069 | / impl<T: Float + Send + Sync> CascadeTrainer<T>
+1070 | | where
+1071 | |     T::FromStrRadixErr: Send + Sync,
+     | |____________________________________- methods in this implementation
+...
+1074 |       fn train_candidates_parallel(
+     |          ^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+1114 |       fn train_single_candidate_with_data(
+     |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+1152 |       fn calculate_candidate_correlation_with_data(
+     |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+1180 |       fn update_candidate_weights_simple(
+     |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field `api_coverage` is never read
+   --> src/integration.rs:692:5
+    |
+690 | pub struct FannCompatibilityValidator<T: Float> {
+    |            -------------------------- field in this struct
+691 |     compatibility_tests: Vec<CompatibilityTest<T>>,
+692 |     api_coverage: HashMap<String, bool>,
+    |     ^^^^^^^^^^^^
+
+warning: fields `buffer_size` and `name` are never read
+  --> src/memory_manager.rs:27:5
+   |
+21 | pub struct MemoryPool<T: Float> {
+   |            ---------- fields in this struct
+...
+27 |     buffer_size: usize,
+   |     ^^^^^^^^^^^
+28 |     /// Pool name
+29 |     name: String,
+   |     ^^^^
+
+warning: method `calculate_quickprop_delta` is never used
+  --> src/training/quickprop.rs:99:8
+   |
+24 | impl<T: Float + Send + Default> Quickprop<T> {
+   | -------------------------------------------- method in this implementation
+...
+99 |     fn calculate_quickprop_delta(
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: method `update_step_size` is never used
+   --> src/training/rprop.rs:113:8
+    |
+ 26 | impl<T: Float + Send + Default> Rprop<T> {
+    | ---------------------------------------- method in this implementation
+...
+113 |     fn update_step_size(&self, step_size: T, gradient: T, previous_gradient: T) -> T {
+    |        ^^^^^^^^^^^^^^^^
+
+warning: field `config` is never read
+   --> src/io/binary.rs:110:5
+    |
+109 | pub struct BinaryReader {
+    |            ------------ field in this struct
+110 |     config: BinaryConfig,
+    |     ^^^^^^
+
+warning: associated function `with_config` is never used
+   --> src/io/binary.rs:122:12
+    |
+113 | impl BinaryReader {
+    | ----------------- associated function in this implementation
+...
+122 |     pub fn with_config(config: BinaryConfig) -> Self {
+    |            ^^^^^^^^^^^
+
+warning: field `config` is never read
+   --> src/io/binary.rs:153:5
+    |
+152 | pub struct BinaryWriter {
+    |            ------------ field in this struct
+153 |     config: BinaryConfig,
+    |     ^^^^^^
+
+warning: associated items `with_config` and `write` are never used
+   --> src/io/binary.rs:165:12
+    |
+156 | impl BinaryWriter {
+    | ----------------- associated items in this implementation
+...
+165 |     pub fn with_config(config: BinaryConfig) -> Self {
+    |            ^^^^^^^^^^^
+...
+170 |     pub fn write<T, W>(&self, data: &T, writer: &mut W) -> IoResult<()>
+    |            ^^^^^
+
+warning: methods `get_ref`, `get_mut`, and `into_inner` are never used
+   --> src/io/compression.rs:139:12
+    |
+130 | impl<R: Read> CompressedReader<R> {
+    | --------------------------------- methods in this implementation
+...
+139 |     pub fn get_ref(&self) -> &GzDecoder<R> {
+    |            ^^^^^^^
+...
+144 |     pub fn get_mut(&mut self) -> &mut GzDecoder<R> {
+    |            ^^^^^^^
+...
+149 |     pub fn into_inner(self) -> GzDecoder<R> {
+    |            ^^^^^^^^^^
+
+warning: methods `get_ref` and `get_mut` are never used
+   --> src/io/compression.rs:199:12
+    |
+165 | impl<W: Write> CompressedWriter<W> {
+    | ---------------------------------- methods in this implementation
+...
+199 |     pub fn get_ref(&self) -> &W {
+    |            ^^^^^^^
+...
+204 |     pub fn get_mut(&mut self) -> &mut W {
+    |            ^^^^^^^
+
+warning: field `include_null` is never read
+  --> src/io/json.rs:86:9
+   |
+82 | pub struct JsonConfig {
+   |            ---------- field in this struct
+...
+86 |     pub include_null: bool,
+   |         ^^^^^^^^^^^^
+   |
+   = note: `JsonConfig` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `config` is never read
+   --> src/io/json.rs:123:5
+    |
+122 | pub struct JsonReader {
+    |            ---------- field in this struct
+123 |     config: JsonConfig,
+    |     ^^^^^^
+
+warning: associated function `with_config` is never used
+   --> src/io/json.rs:135:12
+    |
+126 | impl JsonReader {
+    | --------------- associated function in this implementation
+...
+135 |     pub fn with_config(config: JsonConfig) -> Self {
+    |            ^^^^^^^^^^^
+
+warning: associated function `with_config` is never used
+   --> src/io/json.rs:169:12
+    |
+160 | impl JsonWriter {
+    | --------------- associated function in this implementation
+...
+169 |     pub fn with_config(config: JsonConfig) -> Self {
+    |            ^^^^^^^^^^^
+
+warning: field `buffer_size` is never read
+ --> src/io/streaming.rs:8:5
+  |
+7 | pub struct TrainingDataStreamReader {
+  |            ------------------------ field in this struct
+8 |     buffer_size: usize,
+  |     ^^^^^^^^^^^
+
+warning: method `buffer_len` is never used
+   --> src/io/streaming.rs:275:12
+    |
+252 | impl<R: Read> BufferedStreamReader<R> {
+    | ------------------------------------- method in this implementation
+...
+275 |     pub fn buffer_len(&self) -> usize {
+    |            ^^^^^^^^^^
+
+warning: field `fallback_chain` is never read
+   --> src/webgpu/backend.rs:117:5
+    |
+111 | pub struct BackendSelector<T: Float>
+    |            --------------- field in this struct
+...
+117 |     fallback_chain: Vec<BackendType>,
+    |     ^^^^^^^^^^^^^^
+    |
+    = note: `BackendSelector` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: fields `timestamp`, `event_type`, `backend_from`, `backend_to`, and `performance_gain` are never read
+  --> src/webgpu/compute_context.rs:74:5
+   |
+73 | struct OptimizationEvent {
+   |        ----------------- fields in this struct
+74 |     timestamp: std::time::Instant,
+   |     ^^^^^^^^^
+75 |     event_type: String,
+   |     ^^^^^^^^^^
+76 |     backend_from: BackendType,
+   |     ^^^^^^^^^^^^
+77 |     backend_to: BackendType,
+   |     ^^^^^^^^^^
+78 |     performance_gain: f64,
+   |     ^^^^^^^^^^^^^^^^
+   |
+   = note: `OptimizationEvent` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: methods `get_backend_switch_count` and `calculate_optimization_score` are never used
+   --> src/webgpu/compute_context.rs:524:8
+    |
+ 81 | impl<T: Float + Send + Sync + std::fmt::Debug + 'static> ComputeContext<T> {
+    | -------------------------------------------------------------------------- methods in this implementation
+...
+524 |     fn get_backend_switch_count(&self) -> u64 {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^^
+...
+533 |     fn calculate_optimization_score(&self) -> f32 {
+    |        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field `optimization_thread_handle` is never read
+   --> src/webgpu/buffer_pool.rs:374:5
+    |
+367 | pub struct AdvancedBufferPool {
+    |            ------------------ field in this struct
+...
+374 |     optimization_thread_handle: Option<std::thread::JoinHandle<()>>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `AdvancedBufferPool` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: fields `prediction_models`, `ensemble_weights`, and `prediction_accuracy` are never read
+  --> src/webgpu/pressure_monitor.rs:74:5
+   |
+72 | pub struct PressurePredictor {
+   |            ----------------- fields in this struct
+73 |     historical_data: VecDeque<PressureReading>,
+74 |     prediction_models: HashMap<PredictionModel, ModelState>,
+   |     ^^^^^^^^^^^^^^^^^
+75 |     ensemble_weights: HashMap<PredictionModel, f32>,
+   |     ^^^^^^^^^^^^^^^^
+76 |     prediction_accuracy: HashMap<PredictionModel, f32>,
+   |     ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `PressurePredictor` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: fields `parameters`, `last_training`, `accuracy_score`, `prediction_count`, and `error_accumulator` are never read
+  --> src/webgpu/pressure_monitor.rs:93:5
+   |
+92 | pub struct ModelState {
+   |            ---------- fields in this struct
+93 |     parameters: HashMap<String, f64>,
+   |     ^^^^^^^^^^
+94 |     last_training: Instant,
+   |     ^^^^^^^^^^^^^
+95 |     accuracy_score: f32,
+   |     ^^^^^^^^^^^^^^
+96 |     prediction_count: u64,
+   |     ^^^^^^^^^^^^^^^^
+97 |     error_accumulator: f64,
+   |     ^^^^^^^^^^^^^^^^^
+   |
+   = note: `ModelState` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `detection_models` is never read
+   --> src/webgpu/pressure_monitor.rs:119:5
+    |
+115 | pub struct AnomalyDetector {
+    |            --------------- field in this struct
+...
+119 |     detection_models: HashMap<AnomalyType, DetectionModel>,
+    |     ^^^^^^^^^^^^^^^^
+    |
+    = note: `AnomalyDetector` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: fields `std_allocation_rate`, `typical_fragmentation`, and `normal_response_latency` are never read
+   --> src/webgpu/pressure_monitor.rs:128:5
+    |
+124 | pub struct BaselineStatistics {
+    |            ------------------ fields in this struct
+...
+128 |     std_allocation_rate: f64,
+    |     ^^^^^^^^^^^^^^^^^^^
+129 |     typical_fragmentation: f32,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+130 |     normal_response_latency: u64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `BaselineStatistics` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: fields `sensitivity`, `false_positive_rate`, `detection_count`, and `last_detection` are never read
+   --> src/webgpu/pressure_monitor.rs:161:5
+    |
+160 | pub struct DetectionModel {
+    |            -------------- fields in this struct
+161 |     sensitivity: f32,
+    |     ^^^^^^^^^^^
+162 |     false_positive_rate: f32,
+    |     ^^^^^^^^^^^^^^^^^^^
+163 |     detection_count: u64,
+    |     ^^^^^^^^^^^^^^^
+164 |     last_detection: Option<Instant>,
+    |     ^^^^^^^^^^^^^^
+    |
+    = note: `DetectionModel` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: fields `learning_engine`, `decision_history`, and `adaptation_parameters` are never read
+   --> src/webgpu/pressure_monitor.rs:171:5
+    |
+169 | pub struct DaaCoordinator {
+    |            -------------- fields in this struct
+170 |     response_strategies: HashMap<MemoryPressure, ResponseStrategy>,
+171 |     learning_engine: LearningEngine,
+    |     ^^^^^^^^^^^^^^^
+172 |     decision_history: VecDeque<DaaDecision>,
+    |     ^^^^^^^^^^^^^^^^
+173 |     adaptation_parameters: AdaptationParameters,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `DaaCoordinator` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: fields `pressure_reduction_target`, `max_response_time`, and `acceptable_performance_impact` are never read
+   --> src/webgpu/pressure_monitor.rs:204:5
+    |
+203 | pub struct SuccessCriteria {
+    |            --------------- fields in this struct
+204 |     pressure_reduction_target: f32,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+205 |     max_response_time: Duration,
+    |     ^^^^^^^^^^^^^^^^^
+206 |     acceptable_performance_impact: f32,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `SuccessCriteria` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: fields `strategy_effectiveness`, `adaptation_rate`, `exploration_factor`, `last_learning_cycle`, and `performance_history` are never read
+   --> src/webgpu/pressure_monitor.rs:212:5
+    |
+211 | pub struct LearningEngine {
+    |            -------------- fields in this struct
+212 |     strategy_effectiveness: HashMap<String, f32>,
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+213 |     adaptation_rate: f32,
+    |     ^^^^^^^^^^^^^^^
+214 |     exploration_factor: f32,
+    |     ^^^^^^^^^^^^^^^^^^
+215 |     last_learning_cycle: Instant,
+    |     ^^^^^^^^^^^^^^^^^^^
+216 |     performance_history: VecDeque<PerformanceRecord>,
+    |     ^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `LearningEngine` has a derived impl for the trait `Debug`, but this is intentionally ignored during dead code analysis
+
+warning: multiple fields are never read
+   --> src/webgpu/pressure_monitor.rs:222:5
+    |
+221 | pub struct PerformanceRecord {
+    |            ----------------- fields in this struct
+222 |     timestamp: Instant,
+    |     ^^^^^^^^^
+223 |     strategy_used: String,
+    |     ^^^^^^^^^^^^^
+224 |     initial_pressure: MemoryPressure,
+    |     ^^^^^^^^^^^^^^^^
+225 |     final_pressure: MemoryPressure,
+    |     ^^^^^^^^^^^^^^
+226 |     response_time: Duration,
+    |     ^^^^^^^^^^^^^
+227 |     success: bool,
+    |     ^^^^^^^
+228 |     side_effects: Vec<String>,
+    |     ^^^^^^^^^^^^
+    |
+    = note: `PerformanceRecord` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: fields `learning_rate`, `forgetting_factor`, `exploration_probability`, `strategy_update_threshold`, and `performance_window_size` are never read
+   --> src/webgpu/pressure_monitor.rs:246:5
+    |
+245 | pub struct AdaptationParameters {
+    |            -------------------- fields in this struct
+246 |     learning_rate: f32,
+    |     ^^^^^^^^^^^^^
+247 |     forgetting_factor: f32,
+    |     ^^^^^^^^^^^^^^^^^
+248 |     exploration_probability: f32,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+249 |     strategy_update_threshold: f32,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+250 |     performance_window_size: usize,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `AdaptationParameters` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: fields `successful_interventions`, `average_response_time`, `pressure_reduction_effectiveness`, `adaptation_cycles_completed`, and `strategy_convergence_score` are never read
+   --> src/webgpu/pressure_monitor.rs:257:5
+    |
+255 | pub struct DaaPerformanceMetrics {
+    |            --------------------- fields in this struct
+256 |     decisions_made: u64,
+257 |     successful_interventions: u64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^
+258 |     average_response_time: Duration,
+    |     ^^^^^^^^^^^^^^^^^^^^^
+259 |     pressure_reduction_effectiveness: f32,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+260 |     adaptation_cycles_completed: u64,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+261 |     strategy_convergence_score: f32,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `DaaPerformanceMetrics` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `max_execution_time_variance` is never read
+   --> src/webgpu/performance_monitor.rs:116:5
+    |
+105 | pub struct AlertThresholds {
+    |            --------------- field in this struct
+...
+116 |     max_execution_time_variance: f32,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `AlertThresholds` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: `ruv-fann` (lib test) generated 46 warnings (run `cargo fix --lib -p ruv-fann --tests` to apply 11 suggestions)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.06s
+     Running unittests src/lib.rs (/workspace/scratch/d8bc49620fcf/probe-target/debug/deps/ruv_fann-23becbb533372d1a)
+
+running 1 test
+test tests::network_tests::test_deterministic_forward_pass ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 172 filtered out; finished in 0.00s

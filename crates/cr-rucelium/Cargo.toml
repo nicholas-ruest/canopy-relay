@@ -1,0 +1,18 @@
+[package]
+name = "cr-rucelium"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+cr-types = { path = "../cr-types" }
+cr-errors = { path = "../cr-errors" }
+rucelium-ingest = { git = "https://github.com/ruvnet/RuCelium", rev = "813da13eb9a46b6acf78fe7ecc8c220ecf83b386" }
+rucelium-abi = { git = "https://github.com/ruvnet/RuCelium", rev = "813da13eb9a46b6acf78fe7ecc8c220ecf83b386" }
+rucelium-core = { git = "https://github.com/ruvnet/RuCelium", rev = "813da13eb9a46b6acf78fe7ecc8c220ecf83b386" }

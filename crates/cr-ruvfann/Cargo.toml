@@ -1,0 +1,21 @@
+[package]
+name = "cr-ruvfann"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+cr-types = { path = "../cr-types" }
+cr-errors = { path = "../cr-errors" }
+ruv-fann = { version = "=0.2.1", default-features = false, features = ["std"] }
+
+[package.metadata.canopy-relay.upstream]
+canonical-repository = "https://github.com/ruvnet/ruv-FANN"
+revision = "f4ca36c2323d08eac822bac43b62040198721cbf"
+binding = "Exact crates.io release declared by the selected repository revision; direct git fetch is blocked by the repository's malformed nested submodule."

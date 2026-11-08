@@ -1,0 +1,44 @@
+[package]
+name = "cr-application"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+chrono = { workspace = true }
+hex = { workspace = true }
+parking_lot = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+tokio = { workspace = true }
+cr-types = { path = "../cr-types" }
+cr-errors = { path = "../cr-errors" }
+cr-contracts = { path = "../cr-contracts" }
+cr-device-trust = { path = "../cr-device-trust" }
+cr-ingest = { path = "../cr-ingest" }
+cr-calibration = { path = "../cr-calibration" }
+cr-habitat-graph = { path = "../cr-habitat-graph" }
+cr-provenance = { path = "../cr-provenance" }
+cr-temporal-anomaly = { path = "../cr-temporal-anomaly" }
+cr-mesh-transport = { path = "../cr-mesh-transport" }
+cr-neural-forecast = { path = "../cr-neural-forecast" }
+cr-intervention = { path = "../cr-intervention" }
+cr-audit = { path = "../cr-audit" }
+cr-observability = { path = "../cr-observability" }
+cr-cedar-policy = { path = "../cr-cedar-policy" }
+cr-repository = { path = "../cr-repository" }
+cr-seed = { path = "../cr-seed" }
+cr-dashboard = { path = "../cr-dashboard" }
+cr-upstream-compose = { path = "../cr-upstream-compose" }
+
+[dev-dependencies]
+cr-opendal-store = { path = "../cr-opendal-store" }
+cr-rucelium = { path = "../cr-rucelium" }
+cr-worldgraph = { path = "../cr-worldgraph" }
+cr-midstream = { path = "../cr-midstream" }
+cr-latentmesh = { path = "../cr-latentmesh" }
+cr-ruvfann = { path = "../cr-ruvfann" }
+

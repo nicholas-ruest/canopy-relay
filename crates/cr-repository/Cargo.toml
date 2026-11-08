@@ -1,0 +1,22 @@
+[package]
+name = "cr-repository"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+parking_lot = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }
+cr-types = { path = "../cr-types" }
+cr-errors = { path = "../cr-errors" }
+cr-opendal-store = { path = "../cr-opendal-store" }
+
+[dev-dependencies]
+chrono = { workspace = true }

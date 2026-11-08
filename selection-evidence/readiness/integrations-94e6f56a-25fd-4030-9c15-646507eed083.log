@@ -1,0 +1,7 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running unittests src/lib.rs (/workspace/scratch/d8bc49620fcf/probe-target/debug/deps/rucelium_ingest-dab6e358a9b9ceb0)
+
+running 1 test
+test tests::happy_path_ingests_verified_sample_with_registry_firmware ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.00s

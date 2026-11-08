@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="420" viewBox="0 0 1120 420" role="img" aria-labelledby="title desc">
+  <title id="title">Canopy Relay camera-free habitat twin</title>
+  <desc id="desc">Signed sensors pulse into a habitat graph, then an evidence panel and governed intervention.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071f1a"/><stop offset="1" stop-color="#123b32"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1120" height="420" rx="28" fill="url(#bg)"/>
+  <text x="55" y="65" fill="#d9f7e8" font-size="30" font-family="system-ui" font-weight="700">CANOPY RELAY</text>
+  <text x="55" y="94" fill="#8ec9ad" font-size="16" font-family="system-ui">camera-free field intelligence • signed evidence • reversible action</text>
+  <g stroke="#4f8e75" stroke-width="3" opacity=".8">
+    <path d="M270 176 L470 135 L590 230 L730 145 L890 225"/><path d="M270 176 L390 292 L590 230 L700 310 L890 225"/><path d="M470 135 L700 310"/>
+  </g>
+  <g fill="#153f35" stroke="#8ee8bd" stroke-width="3">
+    <circle cx="470" cy="135" r="35"/><circle cx="590" cy="230" r="45"/><circle cx="730" cy="145" r="38"/><circle cx="390" cy="292" r="34"/><circle cx="700" cy="310" r="32"/>
+  </g>
+  <g fill="#ecb85d" filter="url(#glow)">
+    <circle cx="270" cy="176" r="14"><animate attributeName="r" values="10;17;10" dur="2.8s" repeatCount="indefinite"/></circle>
+    <circle cx="890" cy="225" r="14"><animate attributeName="opacity" values=".35;1;.35" dur="2.4s" repeatCount="indefinite"/></circle>
+  </g>
+  <g font-family="system-ui" fill="#d9f7e8" font-size="14" text-anchor="middle"><text x="470" y="140">wetland</text><text x="590" y="235">riparian</text><text x="730" y="150">meadow</text><text x="390" y="297">forest edge</text><text x="700" y="315">water point</text></g>
+  <rect x="930" y="120" width="145" height="180" rx="18" fill="#09271f" stroke="#4f8e75"/>
+  <text x="950" y="155" fill="#8ee8bd" font-size="14" font-family="system-ui">EVIDENCE</text><text x="950" y="185" fill="#d9f7e8" font-size="13" font-family="system-ui">signature ✓</text><text x="950" y="210" fill="#d9f7e8" font-size="13" font-family="system-ui">anomaly 0.72</text><text x="950" y="235" fill="#d9f7e8" font-size="13" font-family="system-ui">forecast +18%</text><text x="950" y="260" fill="#ecb85d" font-size="13" font-family="system-ui">review action</text>
+  <circle cx="130" cy="245" r="24" fill="#1f5d4b" stroke="#8ee8bd"><animateTransform attributeName="transform" type="translate" values="0 0;100 -69;0 0" dur="4s" repeatCount="indefinite"/></circle>
+  <text x="55" y="378" fill="#8ec9ad" font-size="14" font-family="system-ui">ACOUSTIC</text><text x="170" y="378" fill="#8ec9ad" font-size="14" font-family="system-ui">SOIL</text><text x="245" y="378" fill="#8ec9ad" font-size="14" font-family="system-ui">WATER</text><text x="345" y="378" fill="#8ec9ad" font-size="14" font-family="system-ui">WEATHER</text>
+</svg>
+

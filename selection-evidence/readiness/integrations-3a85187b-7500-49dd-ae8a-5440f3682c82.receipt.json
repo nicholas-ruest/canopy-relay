@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "suite": "integrations",
+  "source_sha": "99d8543f77ad38eacdaa30e3d7fe9893f8b3285f",
+  "argv": [
+    "bash",
+    "scripts/probe.sh",
+    "opendal-failure"
+  ],
+  "started_at": "2026-11-08T03:24:32.174Z",
+  "ended_at": "2026-11-08T03:24:32.288Z",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "integrity_error": null,
+  "log": "integrations-3a85187b-7500-49dd-ae8a-5440f3682c82.log",
+  "log_sha256": "ffd2086a3e84fd0106c3ea0a9542c54b374d1f21426e704e72bc6d186d784a5c"
+}

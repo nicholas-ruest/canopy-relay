@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "modules": [
+    {
+      "path": "scripts/dream-machine-product-gate.mjs",
+      "bytes": 16042,
+      "sha256": "193079f8e70b16f84197e8a308bf41b773d25ca539f9ebf5afbddd0ed6f98a0e",
+      "git_blob_sha1": "ac6986d10d9ecdec0a0784ee1e190ba9ceb78395"
+    },
+    {
+      "path": "scripts/dream-machine-selection-gate.mjs",
+      "bytes": 9596,
+      "sha256": "27e99d82a90012110e097e9d94d0cfd2f9577c4ef12686fc589d68674e26ef49",
+      "git_blob_sha1": "d0db4bab6ab1ef2a3b6a149ba79d22a55de18ced"
+    },
+    {
+      "path": "scripts/dream-machine-backend-gate.mjs",
+      "bytes": 8624,
+      "sha256": "82fa38c26a5ed091372de192cf5fedabc5cdbc63896ffff1503ab0fdafbde81e",
+      "git_blob_sha1": "531749e41c19b6f1ba3d03e1cc5c7b9226de0b66"
+    }
+  ]
+}

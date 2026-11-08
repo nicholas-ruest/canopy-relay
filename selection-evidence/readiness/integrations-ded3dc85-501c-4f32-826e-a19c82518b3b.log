@@ -1,0 +1,37 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.09s
+     Running unittests src/lib.rs (/workspace/scratch/d8bc49620fcf/probe-target/debug/deps/cedar_policy-939dc876a7066731)
+
+running 1 test
+test ffi::is_authorized::test::test_authorized_on_multi_policy_slice_denies_when_expected ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 472 filtered out; finished in 0.01s
+
+     Running tests/proto_decode_regression.rs (/workspace/scratch/d8bc49620fcf/probe-target/debug/deps/proto_decode_regression-8746ae00e3906b90)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/proto_generate_test_files.rs (/workspace/scratch/d8bc49620fcf/probe-target/debug/deps/proto_generate_test_files-a1767a2e3ccfc89f)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/public_interface.rs (/workspace/scratch/d8bc49620fcf/probe-target/debug/deps/public_interface-e74a14d244375203)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.00s
+
+     Running tests/test_external.rs (/workspace/scratch/d8bc49620fcf/probe-target/debug/deps/test_external-7110f34dde2b04ea)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 24 filtered out; finished in 0.00s
+
+     Running tests/test_linker.rs (/workspace/scratch/d8bc49620fcf/probe-target/debug/deps/test_linker-2eda3a5f38b73155)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 36 filtered out; finished in 0.00s

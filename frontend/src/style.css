@@ -1,0 +1,16 @@
+:root {
+  color: #18231d;
+  background: #f1f2e9;
+  font-family: Inter, Aptos, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: .58; }
+a { color: inherit; }
+::selection { background: #bbd8a7; color: #142319; }

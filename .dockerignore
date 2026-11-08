@@ -1,0 +1,10 @@
+.git
+target
+frontend/node_modules
+frontend/dist
+frontend/test-results
+frontend/playwright-report
+upstreams/node_modules
+evidence
+data
+selection-evidence
